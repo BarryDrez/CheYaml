@@ -70,7 +70,7 @@ items:
     CHE_INFRA_KUBERNETES_INGRESS_DOMAIN: "che.daeirnd05.k8s.eur.ad.sag"
     CHE_INFRA_KUBERNETES_SERVER__STRATEGY: "default-host"
     CHE_WORKSPACE_PLUGIN__REGISTRY__URL: "https://che-plugin-registry.openshift.io"
-- apiVersion: extensions/v1beta2
+- apiVersion: extensions/v1beta1
   kind: Ingress
   metadata:
     name: che-ingress
@@ -86,7 +86,7 @@ items:
         - backend:
             serviceName: che-host
             servicePort: 8080
-- apiVersion: extensions/v1beta2
+- apiVersion: extensions/v1beta1
   kind: Deployment
   metadata:
     labels:
