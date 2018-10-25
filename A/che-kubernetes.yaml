@@ -41,13 +41,13 @@ items:
       app: che
     name: che
   data:
-    CHE_HOST: "10.20.198.74.nip.io"
+    CHE_HOST: "che.daeirnd05.k8s.eur.ad.sag"
     CHE_PORT: "8080"
-    CHE_API: "http://10.20.198.74.nip.io/api"
-    CHE_WEBSOCKET_ENDPOINT:  ws://10.20.198.74.nip.io/api/websocket
+    CHE_API: "http://che.daeirnd05.k8s.eur.ad.sag/api"
+    CHE_WEBSOCKET_ENDPOINT:  ws://che.daeirnd05.k8s.eur.ad.sag/api/websocket
     CHE_DEBUG_SERVER: "true"
     CHE_INFRASTRUCTURE_ACTIVE: kubernetes
-    CHE_INFRA_KUBERNETES_BOOTSTRAPPER_BINARY__URL: http://10.20.198.74.nip.io/agent-binaries/linux_amd64/bootstrapper/bootstrapper
+    CHE_INFRA_KUBERNETES_BOOTSTRAPPER_BINARY__URL: http://che.daeirnd05.k8s.eur.ad.sag/agent-binaries/linux_amd64/bootstrapper/bootstrapper
     CHE_INFRA_KUBERNETES_MACHINE__START__TIMEOUT__MIN: "5"
     CHE_INFRA_KUBERNETES_MASTER__URL: ""
     CHE_INFRA_KUBERNETES_NAMESPACE: "che"
@@ -67,7 +67,7 @@ items:
     CHE_WORKSPACE_AUTO_START: "false"
     CHE_INFRA_KUBERNETES_INGRESS_ANNOTATIONS__JSON: '{"nginx.ingress.kubernetes.io/rewrite-target": "/","nginx.ingress.kubernetes.io/ssl-redirect": "false","nginx.ingress.kubernetes.io/proxy-connect-timeout": "3600","nginx.ingress.kubernetes.io/proxy-read-timeout": "3600"}'
     CHE_LOGS_APPENDERS_IMPL: "plaintext"
-    CHE_INFRA_KUBERNETES_INGRESS_DOMAIN: "10.20.198.74.nip.io"
+    CHE_INFRA_KUBERNETES_INGRESS_DOMAIN: "che.daeirnd05.k8s.eur.ad.sag"
     CHE_INFRA_KUBERNETES_SERVER__STRATEGY: "default-host"
     CHE_WORKSPACE_PLUGIN__REGISTRY__URL: "https://che-plugin-registry.openshift.io"
 - apiVersion: extensions/v1beta1
@@ -80,7 +80,7 @@ items:
       nginx.ingress.kubernetes.io/proxy-connect-timeout: "3600"
   spec:
     rules:
-    - host: 10.20.198.74.nip.io
+    - host: che.daeirnd05.k8s.eur.ad.sag
       http:
         paths:
         - backend:
