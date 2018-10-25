@@ -258,7 +258,7 @@ items:
               configMapKeyRef:
                 key: CHE_WORKSPACE_PLUGIN__REGISTRY__URL
                 name: che
-          image: eclipse/che-server:nightly
+          image: eclipse/che-server:6.12.0
           imagePullPolicy: Always
           livenessProbe:
             httpGet:
